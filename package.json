@@ -1,6 +1,6 @@
 {
   "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
+  "description": "GitHub Action that allows you to track your deployments on Waroom.",
   "version": "0.0.0",
   "author": "",
   "private": true,
