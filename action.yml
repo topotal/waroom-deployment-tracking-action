@@ -1,0 +1,39 @@
+name: 'The name of your action here'
+description: 'Provide a description here'
+author: 'Your name or organization here'
+
+# Define your inputs here.
+inputs:
+  organization:
+    description: "Waroom organization name"
+    required: true
+  service:
+    description: "Waroom service name"
+    required: true
+  key:
+    description: "Waroom Integration Key used when recording a deployment"
+    required: true
+  ref:
+    description: 'Ref for the deployment'
+    required: true
+    default: "${{ github.sha }}"
+  environment:
+    description: 'Ref for the deployment'
+  platform:
+    description: "Platform of the repository"
+    default: "github"
+  description:
+    description: "Description for the deployments"
+  repository_owner:
+    description: "Owner of the repository"
+    default: "${{ github.repository_owner }}"
+  repository_name:
+    description: "Name of the repository"
+    default: "${{ github.event.repository.name }}"
+  fail_on_error:
+    description: "Fail the action if the deployment API returns an error"
+    default: false
+
+runs:
+  using: node20
+  main: dist/index.js
