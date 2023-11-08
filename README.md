@@ -1,6 +1,6 @@
 # Waroom Deployment Tracking for GitHub Actions
 
-GitHub Action that allows you to track your deployments on [Waroom](https://app.waroom.com/).
+GitHub Action that allows you to track your deployments on [Waroom](https://waroom.com/).
 
 ## Usage
 
