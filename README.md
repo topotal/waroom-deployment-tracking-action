@@ -16,6 +16,20 @@ To use this action, add the following code to your workflow file:
     environment: 'production'
 ```
 
+If you want to specify `description` as git commit message,
+you can use the following code:
+
+```yaml
+- name: Waroom Deployment Tracking
+  uses: topotal/waroom-deployment-tracking-action@v1
+  with:
+    organization: 'your-waroom-organization'
+    service: 'your-waroom-service'
+    key: ${{ secrets.WAROOM_DEPLOYMENT_INTEGRATION_KEY }}
+    environment: 'production'
+    description: ${{ github.event.head_commit.message }}
+```
+
 ## Inputs
 
 - `organization`: The Waroom organization name (required).
