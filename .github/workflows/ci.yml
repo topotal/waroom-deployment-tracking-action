@@ -57,3 +57,4 @@ jobs:
           service: 'deployment-actions-test'
           key: ${{ secrets.WAROOM_DEPLOYMENT_INTEGRATION_KEY }}
           environment: 'production'
+          description: ${{ github.event.head_commit.message }}

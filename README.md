@@ -30,6 +30,8 @@ you can use the following code:
     description: ${{ github.event.head_commit.message }}
 ```
 
+_Note_: `github.event.head_commit.message` is available only when the event is `push`.
+
 ## Inputs
 
 - `organization`: The Waroom organization name (required).
