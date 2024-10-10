@@ -65,7 +65,7 @@
     ]
   },
   "dependencies": {
-    "@actions/core": "^1.11.0",
+    "@actions/core": "^1.11.1",
     "@actions/http-client": "^2.2.3"
   },
   "devDependencies": {
