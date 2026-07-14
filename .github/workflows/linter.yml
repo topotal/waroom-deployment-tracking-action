@@ -39,6 +39,13 @@ jobs:
         uses: super-linter/super-linter/slim@v5
         env:
           DEFAULT_BRANCH: main
+          FILTER_REGEX_EXCLUDE: dist/**/*
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TYPESCRIPT_DEFAULT_STYLE: prettier
+          # ESLint runs via `npm run lint` in the CI workflow, so the
+          # JavaScript/TypeScript linters bundled in super-linter are disabled
+          # (same approach as the upstream actions/typescript-action template).
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_TYPESCRIPT_ES: false
+          VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_JSCPD: false
